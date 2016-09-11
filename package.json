@@ -2,7 +2,7 @@
   "name": "firstbot",
   "version": "1.0.0",
   "description": "First attempt at using Microsoft Bot Framework",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
