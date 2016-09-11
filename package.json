@@ -1,0 +1,15 @@
+{
+  "name": "firstbot",
+  "version": "1.0.0",
+  "description": "First attempt at using Microsoft Bot Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sage Franch",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.2.3",
+    "restify": "^4.1.1"
+  }
+}
