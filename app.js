@@ -13,15 +13,15 @@ server.listen(process.env.port || process.env.PORT || 3978, function(){console.l
 
 //Create chat bot
 var connector = new builder.ChatConnector({
-	appId: process.env.MICROSOFT_APP_ID /*1fa4b727-68e9-413e-a9c1-b41f72dc7b6e*/,
-	appPassword: process.env.MICROSOFT_APP_PASSWORD /*5uhqBx0x0unF3PxieLMntFO*/
+	appId: '1fa4b727-68e9-413e-a9c1-b41f72dc7b6e',
+	appPassword: '5uhqBx0x0unF3PxieLMntFO'
 });
 
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
 //==============BOTS INTENTS==================
-bot.dialog('/', intents);
+/*bot.dialog('/', intents);
 
 intents.matches(/^change name/i, [
 	function (session){
@@ -43,10 +43,11 @@ intents.onDefault([
 		session.send('Hello %s!', session.userData.name);
 	}
 ]);
+*/
 
 //================BOTS DIALOGS================
 
-/*bot.dialog('/', [
+bot.dialog('/', [
 	function(session, args, next){
 		session.send('Hello! What is your name?');
 		if(!session.userData.name){
@@ -57,8 +58,8 @@ intents.onDefault([
 	},
 	function(session, results){
 		session.send('Hello %s!', session.userData.name);
-	} /*waterfall chaining - result of first is fed to second 
-]);*/
+	} /*waterfall chaining - result of first is fed to second */
+]);
 
 bot.dialog('/profile', [
 	function(session){
